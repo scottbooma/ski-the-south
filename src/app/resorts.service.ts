@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { of } from 'rxjs';
 import { Resort } from './models/Resort';
 
 @Injectable({
@@ -22,4 +23,8 @@ export class ResortsService {
       imageUrl: 'sugar-logo.png',
     },
   ];
+
+  fetchResorts() {
+    return of(this.resortList);
+  }
 }
