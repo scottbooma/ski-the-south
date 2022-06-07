@@ -1,0 +1,46 @@
+.resort-listing {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  grid-template-rows: auto auto 1fr;
+  width: 400px;
+  margin: 12px auto 48px;
+}
+
+.resort-logo {
+  width: 100px;
+  grid-column: 1 / span 1;
+  grid-row: 1 / span 3;
+}
+
+.resort-name {
+  grid-column: 2 / span 1;
+  grid-row: 1 / span 1;
+  font-size: 24px;
+  margin-bottom: 8px;
+  margin-left: 32px;
+}
+
+.resort-location {
+  grid-column: 2 / span 1;
+  grid-row: 2 / span 1;
+  margin-bottom: 12px;
+  margin-left: 32px;
+}
+
+.view-resort {
+  grid-column: 2 / span 1;
+  grid-row: 3 / span 1;
+  text-decoration: none;
+  background-color: hsl(240, 30%, 70%);
+  color: white;
+  font-size: 20px;
+  width: fit-content;
+  padding: 12px 32px;
+  margin-bottom: auto;
+  border-radius: 8px;
+  margin-left: 56px;
+}
+
+.view-resort:hover {
+  background-color: hsl(240, 30%, 50%);
+}
