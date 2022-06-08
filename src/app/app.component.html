@@ -3,14 +3,5 @@
 </header>
 
 <main>
-  <h2>Ski Resorts</h2>
-  <ul class="resort-list">
-    <li *ngFor="let resort of resortList">
-      <app-resort-listing
-        [name]="resort.name"
-        [location]="resort.location"
-        [imageUrl]="resort.imageUrl"
-      ></app-resort-listing>
-    </li>
-  </ul>
+  <app-resort-list></app-resort-list>
 </main>
