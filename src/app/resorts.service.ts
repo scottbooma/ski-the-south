@@ -1,6 +1,13 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { of } from 'rxjs';
+import { environment } from 'src/environments/environment';
 import { Resort } from './models/Resort';
+
+type ResortsResponse = {
+  resorts: Resort[];
+};
+
+const resortsEndpoint = `${environment.apiUrl}/resorts`;
 
 @Injectable({
   providedIn: 'root',
@@ -24,7 +31,9 @@ export class ResortsService {
     },
   ];
 
+  constructor(private http: HttpClient) {}
+
   fetchResorts() {
-    return of(this.resortList);
+    return this.http.get<ResortsResponse>(resortsEndpoint);
   }
 }

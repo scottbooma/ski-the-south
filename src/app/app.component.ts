@@ -13,8 +13,8 @@ export class AppComponent implements OnInit {
   constructor(private resortsService: ResortsService) {}
 
   ngOnInit() {
-    this.resortsService.fetchResorts().subscribe((resortList) => {
-      this.resortList = resortList;
+    this.resortsService.fetchResorts().subscribe((response) => {
+      this.resortList = response.resorts;
     });
   }
 }
