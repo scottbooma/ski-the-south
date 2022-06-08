@@ -3,4 +3,8 @@
 
 body {
   font-family: "Titillium Web", sans-serif;
+  background-image: url(assets/background.png);
+  background-size: 200%;
+  background-repeat: no-repeat;
+  background-position: 40% 40%;
 }

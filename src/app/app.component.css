@@ -8,11 +8,12 @@ header {
   font-family: "Road_Rage";
   font-size: 80px;
   text-align: center;
+  color: rgb(8, 13, 82);
 }
 
 h1 {
   padding-top: 16px;
-  padding-bottom: 32px;
+  padding-bottom: 16px;
 }
 
 h2 {
@@ -20,4 +21,16 @@ h2 {
   font-weight: 600;
   text-align: center;
   padding-bottom: 24px;
+}
+
+main {
+  margin-top: 36px;
+  padding-top: 16px;
+  width: 50%;
+  background: white;
+  border-radius: 10%;
+  border: solid 4px rgb(8, 13, 82);
+  margin-left: auto;
+  margin-right: auto;
+  color: rgb(8, 13, 82);
 }
