@@ -6,9 +6,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ResortListingComponent } from './resort-listing/resort-listing.component';
 import { ResortListComponent } from './resort-list/resort-list.component';
+import { ResortInfoComponent } from './resort-info/resort-info.component';
 
 @NgModule({
-  declarations: [AppComponent, ResortListingComponent, ResortListComponent],
+  declarations: [
+    AppComponent,
+    ResortListingComponent,
+    ResortListComponent,
+    ResortInfoComponent,
+  ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],

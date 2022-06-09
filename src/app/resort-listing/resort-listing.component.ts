@@ -10,4 +10,5 @@ export class ResortListingComponent {
   @Input() name!: string;
   @Input() location!: string;
   @Input() imageUrl!: string;
+  @Input() label!: string;
 }
