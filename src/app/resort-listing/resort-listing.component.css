@@ -3,7 +3,7 @@
   grid-template-columns: 100px 1fr;
   grid-template-rows: auto auto 1fr;
   width: 400px;
-  margin: 12px auto 48px;
+  margin: 12px auto;
 }
 
 .resort-logo {
@@ -43,12 +43,6 @@
 
 .view-resort:hover {
   background-color: hsl(240, 30%, 50%);
-}
-
-@media (max-width: 1000px) {
-  .resort-listing {
-    margin-bottom: 24px;
-  }
 }
 
 @media (max-width: 800px) {
