@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { ResortListingComponent } from './resort-listing/resort-listing.component';
 import { ResortListComponent } from './resort-list/resort-list.component';
 import { ResortInfoComponent } from './resort-info/resort-info.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { ResortInfoComponent } from './resort-info/resort-info.component';
     ResortListingComponent,
     ResortListComponent,
     ResortInfoComponent,
+    PageNotFoundComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
