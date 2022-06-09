@@ -4,12 +4,9 @@
   grid-template-rows: auto 1fr auto;
 }
 
-.trail-map {
-  max-width: 500px;
+app-trail-map {
   grid-row: 1 / span 3;
   grid-column: 2 / span 1;
-  margin-right: 24px;
-  border-radius: 8px;
 }
 
 .mountain-stats {
@@ -103,7 +100,7 @@ a + a {
     grid-template-rows: auto auto auto auto;
   }
 
-  .trail-map {
+  app-trail-map {
     grid-row: 1 / span 1;
     grid-column: 1 / span 1;
     margin-left: auto;
@@ -144,7 +141,7 @@ a + a {
 }
 
 @media (max-width: 600px) {
-  .trail-map {
+  app-trail-map {
     width: 90%;
   }
 }

@@ -1,0 +1,20 @@
+.trail-map {
+  max-width: 500px;
+  margin-right: 24px;
+  border-radius: 8px;
+}
+
+@media (max-width: 860px) {
+  .trail-map {
+    grid-row: 1 / span 1;
+    grid-column: 1 / span 1;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .trail-map {
+    width: 100%;
+  }
+}

@@ -8,6 +8,7 @@ import { ResortListingComponent } from './resort-listing/resort-listing.componen
 import { ResortListComponent } from './resort-list/resort-list.component';
 import { ResortInfoComponent } from './resort-info/resort-info.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { TrailMapComponent } from './trail-map/trail-map.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     ResortListComponent,
     ResortInfoComponent,
     PageNotFoundComponent,
+    TrailMapComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
