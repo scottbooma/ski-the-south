@@ -8,16 +8,15 @@ h2 {
 .mountain-info {
   display: grid;
   grid-template-columns: 1fr auto;
-  grid-template-rows: auto 1fr;
+  grid-template-rows: auto 1fr auto;
 }
 
 .trail-map {
   max-width: 500px;
-  grid-row: 1 / span 2;
+  grid-row: 1 / span 3;
   grid-column: 2 / span 1;
   margin-right: 24px;
   border-radius: 8px;
-  margin-bottom: 36px;
 }
 
 .mountain-stats {
@@ -76,4 +75,24 @@ p + p {
 
 a + a {
   margin-top: 12px;
+}
+
+.back-button {
+  grid-row: 3 / span 1;
+  grid-column: 1 / span 1;
+  text-decoration: none;
+  background-color: rgb(8, 13, 82);
+  color: white;
+  font-size: 20px;
+  width: 120px;
+  padding: 12px 32px;
+  border-radius: 8px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.back-button:hover {
+  background-color: hsl(240, 30%, 50%);
 }
