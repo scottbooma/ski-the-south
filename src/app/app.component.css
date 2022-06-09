@@ -19,7 +19,9 @@ h1 {
 main {
   margin-top: 24px;
   padding-top: 16px;
-  width: 45%;
+  min-width: 45%;
+  max-width: 65%;
+  width: max-content;
   background: white;
   border-radius: 100px;
   border: solid 4px rgb(8, 13, 82);
