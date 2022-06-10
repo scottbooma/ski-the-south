@@ -1,4 +1,3 @@
-// @ts-nocheck
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { TrailMapService } from '../services/trail-map.service';
@@ -11,7 +10,6 @@ import { TrailMapService } from '../services/trail-map.service';
 export class TrailMapComponent implements OnInit {
   name = '';
   imageUrl = '';
-  id?: number;
   constructor(
     private trailMapService: TrailMapService,
     private route: ActivatedRoute
@@ -21,11 +19,11 @@ export class TrailMapComponent implements OnInit {
     this.trailMapService
       .getResortMap(this.route.snapshot.params['resort'])
       .subscribe((skiMapList) => {
-        this.imageUrl = skiMapList[0].media.original.url;
+        this.imageUrl = skiMapList![0].media.original.url;
       });
 
     this.trailMapService
       .getResortInfo(this.route.snapshot.params['resort'])
-      .subscribe((resort) => (this.name = resort.name));
+      .subscribe((resort) => (this.name = resort!.name));
   }
 }
