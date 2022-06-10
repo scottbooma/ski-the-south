@@ -1,4 +1,7 @@
+// @ts-nocheck
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { TrailMapService } from '../services/trail-map.service';
 
 @Component({
   selector: 'app-trail-map',
@@ -6,9 +9,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./trail-map.component.css'],
 })
 export class TrailMapComponent implements OnInit {
-  name = 'Cataloochee';
-  imageUrl = 'https://skimap.org/data/288/2200/1467926831.jpg';
-  constructor() {}
+  name = '';
+  imageUrl = '';
+  id?: number;
+  constructor(
+    private trailMapService: TrailMapService,
+    private route: ActivatedRoute
+  ) {}
 
-  ngOnInit(): void {}
+  ngOnInit() {
+    this.trailMapService
+      .getResortMap(this.route.snapshot.params['resort'])
+      .subscribe((skiMapList) => {
+        this.imageUrl = skiMapList[0].media.original.url;
+      });
+
+    this.trailMapService
+      .getResortInfo(this.route.snapshot.params['resort'])
+      .subscribe((resort) => (this.name = resort.name));
+  }
 }
