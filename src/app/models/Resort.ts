@@ -4,4 +4,9 @@ export type Resort = {
   location: string;
   imageUrl: string;
   label: string;
+  elevation: string;
+  vertical: string;
+  acres: number;
+  trails: number;
+  lifts: number;
 };

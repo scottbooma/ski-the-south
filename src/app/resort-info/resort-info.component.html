@@ -1,7 +1,14 @@
-<h2>Cataloochee Ski Area</h2>
+<h2>{{ name }}</h2>
 <div class="mountain-info">
-  <app-trail-map></app-trail-map>
-  <app-mountain-stats></app-mountain-stats>
+  <app-trail-map [name]="name"></app-trail-map>
+  <app-mountain-stats
+    [location]="location"
+    [elevation]="elevation"
+    [vertical]="vertical"
+    [acres]="acres"
+    [trails]="trails"
+    [lifts]="lifts"
+  ></app-mountain-stats>
   <div class="mountain-links">
     <a target="_blank" href="https://cataloochee.com/the-mountain/snow-report/"
       >Snow Report</a
