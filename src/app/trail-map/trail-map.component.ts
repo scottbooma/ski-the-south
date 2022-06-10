@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { ResortsService } from '../services/resorts.service';
 import { TrailMapService } from '../services/trail-map.service';
 
 @Component({
@@ -12,7 +13,8 @@ export class TrailMapComponent implements OnInit {
   imageUrl = '';
   constructor(
     private trailMapService: TrailMapService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private resortsService: ResortsService
   ) {}
 
   ngOnInit() {
@@ -22,7 +24,7 @@ export class TrailMapComponent implements OnInit {
         this.imageUrl = skiMapList![0].media.original.url;
       });
 
-    this.trailMapService
+    this.resortsService
       .getResortInfo(this.route.snapshot.params['resort'])
       .subscribe((resort) => (this.name = resort!.name));
   }

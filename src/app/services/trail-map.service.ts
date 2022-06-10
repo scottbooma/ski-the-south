@@ -1,21 +1,10 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { map, mergeMap, switchMap } from 'rxjs';
+import { map, mergeMap } from 'rxjs';
 import { environment } from 'src/environments/environment';
 
 import { ResortsResponse } from '../models/ResortsResponse';
-
-type TrailMapResponse = {
-  ski_maps?: Map[];
-};
-
-type Map = {
-  media: {
-    original: {
-      url: string;
-    };
-  };
-};
+import { TrailMapResponse } from '../models/TrailMapResponse';
 
 @Injectable({
   providedIn: 'root',
@@ -30,16 +19,6 @@ export class TrailMapService {
       ),
       mergeMap((resort) => this.getTrailMap(resort!.id))
     );
-  }
-
-  getResortInfo(label: string) {
-    return this.http
-      .get<ResortsResponse>(`${environment.apiUrl}/resorts`)
-      .pipe(
-        map((response) =>
-          response.resorts.find((resort) => resort.label == label)
-        )
-      );
   }
 
   getTrailMap(id: number) {

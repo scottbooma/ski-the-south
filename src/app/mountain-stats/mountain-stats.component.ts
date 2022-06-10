@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { StatsService } from '../services/stats.service';
 
 @Component({
   selector: 'app-mountain-stats',
@@ -6,14 +7,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./mountain-stats.component.css'],
 })
 export class MountainStatsComponent implements OnInit {
-  location = 'Maggie Valley, NC';
-  elevation = "5,400'";
-  vertical = "740'";
-  acres = 50;
-  trails = 18;
-  lifts = 5;
+  location = '';
+  elevation = '';
+  vertical = '';
+  acres = 0;
+  trails = 0;
+  lifts = 0;
 
-  constructor() {}
+  constructor(private statsService: StatsService) {}
 
-  ngOnInit(): void {}
+  ngOnInit() {
+    this.location = this.statsService.location;
+    this.elevation = this.statsService.elevation;
+    this.vertical = this.statsService.vertical;
+    this.acres = this.statsService.acres;
+    this.trails = this.statsService.trails;
+    this.lifts = this.statsService.lifts;
+  }
 }
