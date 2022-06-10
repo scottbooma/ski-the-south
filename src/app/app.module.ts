@@ -9,6 +9,7 @@ import { ResortListComponent } from './resort-list/resort-list.component';
 import { ResortInfoComponent } from './resort-info/resort-info.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { TrailMapComponent } from './trail-map/trail-map.component';
+import { MountainStatsComponent } from './mountain-stats/mountain-stats.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { TrailMapComponent } from './trail-map/trail-map.component';
     ResortInfoComponent,
     PageNotFoundComponent,
     TrailMapComponent,
+    MountainStatsComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],

@@ -9,34 +9,9 @@ app-trail-map {
   grid-column: 2 / span 1;
 }
 
-.mountain-stats {
+app-mountain-stats {
   grid-row: 1 / span 1;
   grid-column: 1 / span 1;
-  margin-left: 24px;
-  margin-right: 24px;
-  padding-top: 8px;
-  font-size: 18px;
-  position: relative;
-}
-
-h3 {
-  font-weight: 600;
-  font-size: 24px;
-  text-align: center;
-  padding-bottom: 24px;
-}
-
-span {
-  margin-left: 8px;
-}
-
-p + p > span {
-  position: absolute;
-  right: 0;
-}
-
-p + p {
-  margin-top: 12px;
 }
 
 .mountain-links {
@@ -87,12 +62,6 @@ a + a {
   background-color: hsl(240, 30%, 50%);
 }
 
-@media (max-width: 925px) {
-  .mountain-stats {
-    font-size: 16px;
-  }
-}
-
 @media (max-width: 860px) {
   .mountain-info {
     display: grid;
@@ -107,17 +76,9 @@ a + a {
     margin-right: auto;
   }
 
-  .mountain-stats {
+  app-mountain-stats {
     grid-row: 2 / span 1;
     grid-column: 1 / span 1;
-    width: 250px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  p > span {
-    position: absolute;
-    right: 0;
   }
 
   .mountain-links {
