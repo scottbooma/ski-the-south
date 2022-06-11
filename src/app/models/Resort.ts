@@ -9,4 +9,9 @@ export type Resort = {
   acres: number;
   trails: number;
   lifts: number;
+  snowReportUrl: string;
+  webcamsUrl: string;
+  weatherUrl: string;
+  liftTicketsUrl: string;
+  rentalsUrl: string;
 };

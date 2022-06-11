@@ -15,6 +15,11 @@ export class ResortInfoComponent implements OnInit {
   acres = 0;
   trails = 0;
   lifts = 0;
+  snowReportUrl = '';
+  webcamsUrl = '';
+  weatherUrl = '';
+  liftTicketsUrl = '';
+  rentalsUrl = '';
 
   constructor(
     private resortsService: ResortsService,
@@ -32,6 +37,11 @@ export class ResortInfoComponent implements OnInit {
         this.acres = resort!.acres;
         this.trails = resort!.trails;
         this.lifts = resort!.lifts;
+        this.snowReportUrl = resort!.snowReportUrl;
+        this.webcamsUrl = resort!.webcamsUrl;
+        this.weatherUrl = resort!.weatherUrl;
+        this.liftTicketsUrl = resort!.liftTicketsUrl;
+        this.rentalsUrl = resort!.rentalsUrl;
       });
   }
 }
