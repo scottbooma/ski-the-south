@@ -14,32 +14,10 @@ app-mountain-stats {
   grid-column: 1 / span 1;
 }
 
-.mountain-links {
+app-resort-links {
   grid-row: 2 / span 1;
   grid-column: 1 / span 1;
   margin-top: 36px;
-}
-
-.mountain-links a {
-  text-decoration: none;
-  background-color: hsl(240, 30%, 70%);
-  color: white;
-  font-size: 20px;
-  width: 120px;
-  padding: 12px 32px;
-  border-radius: 8px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-}
-
-.mountain-links a:hover {
-  background-color: hsl(240, 30%, 50%);
-}
-
-a + a {
-  margin-top: 12px;
 }
 
 .back-button {
@@ -81,17 +59,9 @@ a + a {
     grid-column: 1 / span 1;
   }
 
-  .mountain-links {
+  app-resort-links {
     grid-row: 3 / span 1;
     grid-column: 1 / span 1;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 12px;
-  }
-
-  .mountain-links a {
-    margin: 8px 8px;
   }
 
   .back-button {
@@ -108,11 +78,6 @@ a + a {
 }
 
 @media (max-width: 500px) {
-  .mountain-links a {
-    font-size: 16px;
-    width: 90px;
-  }
-
   .back-button {
     font-size: 14px;
     width: 70px;
@@ -120,11 +85,6 @@ a + a {
 }
 
 @media (max-width: 400px) {
-  .mountain-links a {
-    font-size: 20px;
-    width: 120px;
-  }
-
   .back-button {
     font-size: 16px;
     width: 90px;

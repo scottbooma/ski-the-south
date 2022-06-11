@@ -1,0 +1,48 @@
+.resort-links a {
+  text-decoration: none;
+  background-color: hsl(240, 30%, 70%);
+  color: white;
+  font-size: 20px;
+  width: 120px;
+  padding: 12px 32px;
+  border-radius: 8px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.resort-links a:hover {
+  background-color: hsl(240, 30%, 50%);
+}
+
+a + a {
+  margin-top: 12px;
+}
+
+@media (max-width: 860px) {
+  .resort-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 12px;
+  }
+
+  .resort-links a {
+    margin: 8px 8px;
+  }
+}
+
+@media (max-width: 500px) {
+  .resort-links a {
+    font-size: 16px;
+    width: 90px;
+  }
+}
+
+@media (max-width: 400px) {
+  .resort-links a {
+    font-size: 20px;
+    width: 120px;
+  }
+}
