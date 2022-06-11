@@ -1,7 +1,7 @@
 .trail-map {
   max-width: 500px;
   margin-right: 24px;
-  border-radius: 8px;
+  border-radius: 16px;
 }
 
 @media (max-width: 860px) {
