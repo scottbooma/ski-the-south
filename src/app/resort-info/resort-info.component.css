@@ -20,24 +20,9 @@ app-resort-links {
   margin-top: 36px;
 }
 
-.back-button {
+app-back-button {
   grid-row: 3 / span 1;
   grid-column: 1 / span 1;
-  text-decoration: none;
-  background-color: rgb(8, 13, 82);
-  color: white;
-  font-size: 16px;
-  width: 90px;
-  padding: 12px 32px;
-  border-radius: 8px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-}
-
-.back-button:hover {
-  background-color: hsl(240, 30%, 50%);
 }
 
 @media (max-width: 860px) {
@@ -64,29 +49,14 @@ app-resort-links {
     grid-column: 1 / span 1;
   }
 
-  .back-button {
+  app-back-button {
     grid-row: 4 / span 1;
     grid-column: 1 / span 1;
-    margin-top: 24px;
   }
 }
 
 @media (max-width: 600px) {
   app-trail-map {
     width: 90%;
-  }
-}
-
-@media (max-width: 500px) {
-  .back-button {
-    font-size: 14px;
-    width: 70px;
-  }
-}
-
-@media (max-width: 400px) {
-  .back-button {
-    font-size: 16px;
-    width: 90px;
   }
 }
