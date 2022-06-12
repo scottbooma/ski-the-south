@@ -18,3 +18,32 @@
   ></app-resort-links>
   <app-back-button></app-back-button>
 </div>
+<div class="reports">
+  <form class="new-report-form">
+    <div class="small-inputs">
+      <div class="name-input">
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" required />
+      </div>
+
+      <div class="date-input">
+        <label for="date">Date</label>
+        <input type="date" name="date" id="date" required />
+      </div>
+
+      <div class="vibe-input">
+        <label for="vibe">Vibe</label>
+        <input type="range" name="vibe" id="vibe" min="0" max="10" step="1" />
+      </div>
+    </div>
+
+    <div class="report-input">
+      <label for="report">Report</label>
+      <textarea type="text" name="report" id="report" required></textarea>
+    </div>
+
+    <input type="submit" value="Submit Report" />
+  </form>
+
+  <div class="report-list"></div>
+</div>

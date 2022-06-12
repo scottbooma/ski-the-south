@@ -25,6 +25,66 @@ app-back-button {
   grid-column: 1 / span 1;
 }
 
+.new-report-form {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+label {
+  display: block;
+  margin-bottom: 4px;
+}
+
+input {
+  display: inline;
+  width: 100%;
+}
+
+.small-inputs {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: 20px 0 12px;
+}
+
+#name,
+#date {
+  padding: 8px;
+}
+
+#vibe {
+  width: 200px;
+}
+
+.report-input {
+  width: 80%;
+}
+
+textarea {
+  resize: vertical;
+  overflow-y: auto;
+  width: 100%;
+  min-height: 70px;
+  padding: 8px;
+}
+
+[type="submit"] {
+  background-color: hsl(240, 30%, 70%);
+  color: white;
+  font-size: 20px;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 32px;
+  cursor: pointer;
+  width: 25%;
+  margin-top: 12px;
+}
+
+[type="submit"]:hover {
+  background-color: hsl(240, 30%, 50%);
+}
+
 @media (max-width: 860px) {
   .mountain-info {
     display: grid;
