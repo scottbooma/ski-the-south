@@ -12,6 +12,7 @@ import { TrailMapComponent } from './trail-map/trail-map.component';
 import { MountainStatsComponent } from './mountain-stats/mountain-stats.component';
 import { ResortLinksComponent } from './resort-links/resort-links.component';
 import { BackButtonComponent } from './back-button/back-button.component';
+import { ReportListComponent } from './report-list/report-list.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { BackButtonComponent } from './back-button/back-button.component';
     MountainStatsComponent,
     ResortLinksComponent,
     BackButtonComponent,
+    ReportListComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
