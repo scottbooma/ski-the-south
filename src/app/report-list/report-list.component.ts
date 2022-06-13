@@ -1,11 +1,6 @@
 import { Component } from '@angular/core';
+import { Report } from '../models/Report';
 
-type Report = {
-  name: string;
-  date: string;
-  vibe: number;
-  description: string;
-};
 @Component({
   selector: 'app-report-list',
   templateUrl: './report-list.component.html',

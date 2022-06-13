@@ -1,13 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Report } from '../models/Report';
 import { ResortsService } from '../services/resorts.service';
-
-type Report = {
-  name: string;
-  date: string;
-  vibe: number;
-  description: string;
-};
 
 @Component({
   selector: 'app-resort-info',
@@ -53,6 +47,7 @@ export class ResortInfoComponent implements OnInit {
   }
 
   addReport(newReport: Report) {
+    newReport.label = this.route.snapshot.params['resort'];
     console.log(newReport);
   }
 }
