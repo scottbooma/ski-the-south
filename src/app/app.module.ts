@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,6 +14,7 @@ import { MountainStatsComponent } from './mountain-stats/mountain-stats.componen
 import { ResortLinksComponent } from './resort-links/resort-links.component';
 import { BackButtonComponent } from './back-button/back-button.component';
 import { ReportListComponent } from './report-list/report-list.component';
+import { ReportComponent } from './report/report.component';
 
 @NgModule({
   declarations: [
@@ -26,8 +28,9 @@ import { ReportListComponent } from './report-list/report-list.component';
     ResortLinksComponent,
     BackButtonComponent,
     ReportListComponent,
+    ReportComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

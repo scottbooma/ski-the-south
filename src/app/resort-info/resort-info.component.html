@@ -20,16 +20,27 @@
 </div>
 <div class="reports">
   <h3>Trip Reports</h3>
-  <form class="new-report-form">
+  <form
+    #newReportForm="ngForm"
+    class="new-report-form"
+    (ngSubmit)="addReport(newReportForm.value)"
+  >
     <div class="report-header-inputs">
       <div class="name-input">
         <label for="name">Name</label>
-        <input type="text" name="name" id="name" maxlength="15" required />
+        <input
+          type="text"
+          name="name"
+          id="name"
+          maxlength="15"
+          required
+          ngModel
+        />
       </div>
 
       <div class="date-input">
         <label for="date">Date</label>
-        <input type="date" name="date" id="date" required />
+        <input type="date" name="date" id="date" required ngModel />
       </div>
 
       <div class="vibe-input">
@@ -41,14 +52,21 @@
           min="0"
           max="10"
           step="1"
-          value="5"
+          value="0"
+          ngModel
         />
       </div>
     </div>
 
     <div class="report-input">
       <label for="report">Report</label>
-      <textarea type="text" name="report" id="report" required></textarea>
+      <textarea
+        type="text"
+        name="report"
+        id="report"
+        required
+        ngModel
+      ></textarea>
     </div>
 
     <input type="submit" value="Submit Report" />

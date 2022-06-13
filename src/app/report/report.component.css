@@ -1,0 +1,43 @@
+.report {
+  background-color: hsl(240, 12%, 95%);
+  margin: 24px 0;
+  padding: 12px 24px;
+  border-radius: 16px;
+}
+
+.report-header {
+  margin-bottom: 12px;
+}
+
+.report-header > * {
+  display: inline-block;
+}
+
+.report-header > p {
+  color: hsl(236, 82%, 75%);
+  font-size: 14px;
+}
+
+.report-header > p > span {
+  color: rgb(8, 13, 82);
+  font-size: 16px;
+  margin-left: 8px;
+}
+
+.report-name {
+  width: 220px;
+}
+
+.report-date {
+  width: 180px;
+}
+
+.report-label {
+  margin-bottom: 4px;
+  font-size: 14px;
+  color: hsl(236, 82%, 75%);
+}
+
+.report-description {
+  line-height: 1.2;
+}

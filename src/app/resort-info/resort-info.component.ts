@@ -2,6 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ResortsService } from '../services/resorts.service';
 
+type Report = {
+  name: string;
+  date: string;
+  vibe: number;
+  description: string;
+};
+
 @Component({
   selector: 'app-resort-info',
   templateUrl: './resort-info.component.html',
@@ -43,5 +50,9 @@ export class ResortInfoComponent implements OnInit {
         this.liftTicketsUrl = resort!.liftTicketsUrl;
         this.rentalsUrl = resort!.rentalsUrl;
       });
+  }
+
+  addReport(newReport: Report) {
+    console.log(newReport);
   }
 }
