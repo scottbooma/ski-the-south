@@ -15,6 +15,7 @@ import { ResortLinksComponent } from './resort-links/resort-links.component';
 import { BackButtonComponent } from './back-button/back-button.component';
 import { ReportListComponent } from './report-list/report-list.component';
 import { ReportComponent } from './report/report.component';
+import { TripReportsComponent } from './trip-reports/trip-reports.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { ReportComponent } from './report/report.component';
     BackButtonComponent,
     ReportListComponent,
     ReportComponent,
+    TripReportsComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],

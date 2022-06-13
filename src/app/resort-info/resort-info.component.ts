@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Report } from '../models/Report';
 import { ResortsService } from '../services/resorts.service';
 
 @Component({
@@ -44,10 +43,5 @@ export class ResortInfoComponent implements OnInit {
         this.liftTicketsUrl = resort!.liftTicketsUrl;
         this.rentalsUrl = resort!.rentalsUrl;
       });
-  }
-
-  addReport(newReport: Report) {
-    newReport.label = this.route.snapshot.params['resort'];
-    console.log(newReport);
   }
 }
