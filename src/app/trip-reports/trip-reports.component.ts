@@ -18,14 +18,19 @@ export class TripReportsComponent implements OnInit {
 
   ngOnInit() {
     this.reportService.getReports().subscribe((reports) => {
-      this.reports = reports.resorts.filter(
-        (report) => report.label == this.route.snapshot.params['resort']
-      );
+      this.reports = reports.resorts
+        .filter(
+          (report) => report.label == this.route.snapshot.params['resort']
+        )
+        .sort((a, b) => (a.date < b.date ? 1 : -1));
     });
   }
 
   addReport(newReport: Report) {
     newReport.label = this.route.snapshot.params['resort'];
-    console.log(newReport);
+    this.reportService.addReport(newReport).subscribe((response) => {
+      console.log(response);
+      this.reports = [response.report, ...this.reports];
+    });
   }
 }
