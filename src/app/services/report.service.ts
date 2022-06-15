@@ -25,10 +25,15 @@ export class ReportService {
   }
 
   addReport(report: Report) {
-    console.log(report);
     return this.http.post<ReportResponse>(
       `${environment.apiUrl}/reports`,
       report
+    );
+  }
+
+  deleteReport(id: number) {
+    return this.http.delete<ReportResponse>(
+      `${environment.apiUrl}/reports/${id}`
     );
   }
 }

@@ -1,17 +1,82 @@
 <div class="report">
   <div class="report-header">
     <p class="report-name">
-      User: <span>{{ name }}</span>
+      User: <span>{{ report.name }}</span>
     </p>
     <p class="report-date">
-      Date: <span>{{ date }}</span>
+      Date: <span>{{ report.date }}</span>
     </p>
     <p class="report-vibe">
-      Vibe: <span>{{ vibe }}</span>
+      Vibe: <span>{{ report.vibe }}</span>
     </p>
   </div>
   <p class="report-label">Trip Report:</p>
   <p class="report-description">
-    {{ description }}
+    {{ report.description }}
   </p>
+  <form
+    #editReportForm="ngForm"
+    class="edit-report-form"
+    (ngSubmit)="editReport()"
+    *ngIf="more"
+  >
+    <div class="report-header-inputs">
+      <div class="name-input">
+        <label for="name">Name</label>
+        <input
+          type="text"
+          name="name"
+          id="name"
+          maxlength="15"
+          required
+          [(ngModel)]="report.name"
+        />
+      </div>
+
+      <div class="date-input">
+        <label for="date">Date</label>
+        <input
+          type="date"
+          name="date"
+          id="date"
+          required
+          [(ngModel)]="report.date"
+        />
+      </div>
+
+      <div class="vibe-input">
+        <label for="vibe">Vibe</label>
+        <input
+          type="range"
+          name="vibe"
+          id="vibe"
+          min="0"
+          max="10"
+          step="1"
+          value="0"
+          [(ngModel)]="report.vibe"
+        />
+      </div>
+    </div>
+
+    <div class="description-input">
+      <label for="description">Report</label>
+      <textarea
+        type="text"
+        name="description"
+        id="description"
+        required
+        [(ngModel)]="report.description"
+      ></textarea>
+    </div>
+
+    <button id="submit" type="submit">Edit Report</button>
+    <button (click)="deleteReport()">Delete Report</button>
+  </form>
+  <img
+    (click)="expandReport()"
+    class="more"
+    src="../../assets/more-icon.jpg"
+    alt="more"
+  />
 </div>

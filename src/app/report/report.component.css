@@ -3,6 +3,7 @@
   margin: 24px 0;
   padding: 12px 24px;
   border-radius: 16px;
+  position: relative;
 }
 
 .report-header {
@@ -40,4 +41,82 @@
 
 .report-description {
   line-height: 1.2;
+}
+
+.more {
+  position: absolute;
+  right: 20px;
+  bottom: 8px;
+  width: 28px;
+  cursor: pointer;
+}
+
+.edit-report-form {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+label {
+  display: block;
+  margin-bottom: 4px;
+}
+
+input {
+  display: inline;
+  width: 100%;
+  height: 32px;
+}
+
+.report-header-inputs {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: 20px 0 12px;
+}
+
+#name,
+#date {
+  padding: 8px;
+}
+
+#vibe {
+  width: 150px;
+}
+
+.description-input {
+  width: 80%;
+}
+
+textarea {
+  resize: vertical;
+  overflow-y: auto;
+  width: 100%;
+  min-height: 70px;
+  padding: 8px;
+}
+
+textarea,
+input {
+  box-sizing: border-box;
+}
+
+button {
+  background-color: hsl(240, 30%, 70%);
+  color: white;
+  font-size: 14px;
+  border: none;
+  border-radius: 6px;
+  padding: 12px 32px;
+  cursor: pointer;
+  width: 25%;
+  margin-top: 12px;
+}
+
+button + button {
+  margin-left: 12px;
+}
+
+button:hover {
+  background-color: hsl(240, 30%, 50%);
 }
