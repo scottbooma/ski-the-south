@@ -17,7 +17,7 @@
   <form
     #editReportForm="ngForm"
     class="edit-report-form"
-    (ngSubmit)="editReport()"
+    (ngSubmit)="clickEdit()"
     *ngIf="more"
   >
     <div class="report-header-inputs">
@@ -70,7 +70,7 @@
       ></textarea>
     </div>
 
-    <button id="submit" type="submit">Edit Report</button>
+    <button id="submit" type="submit">Save Report</button>
     <button (click)="clickDelete()" type="button">Delete Report</button>
   </form>
   <img

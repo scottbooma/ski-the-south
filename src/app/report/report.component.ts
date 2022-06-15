@@ -18,8 +18,11 @@ export class ReportComponent {
     this.more = !this.more;
   }
 
-  editReport() {
-    console.log(this.report);
+  clickEdit() {
+    this.reportService.editReport(this.report).subscribe();
+    this.router.navigate([`/resort-info/${this.report.label}`]).then(() => {
+      window.location.reload();
+    });
   }
 
   clickDelete() {
