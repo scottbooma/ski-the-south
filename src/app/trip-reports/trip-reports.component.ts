@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Report } from '../models/Report';
 import { ReportService } from '../services/report.service';
 
@@ -13,7 +13,8 @@ export class TripReportsComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private reportService: ReportService
+    private reportService: ReportService,
+    private router: Router
   ) {}
 
   ngOnInit() {
@@ -29,8 +30,10 @@ export class TripReportsComponent implements OnInit {
   addReport(newReport: Report) {
     newReport.label = this.route.snapshot.params['resort'];
     this.reportService.addReport(newReport).subscribe((response) => {
-      console.log(response);
       this.reports = [response.report, ...this.reports];
+    });
+    this.router.navigate([`/resort-info/${newReport.label}`]).then(() => {
+      window.location.reload();
     });
   }
 }
