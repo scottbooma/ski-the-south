@@ -32,8 +32,5 @@ export class TripReportsComponent implements OnInit {
     this.reportService.addReport(newReport).subscribe((response) => {
       this.reports = [response.report, ...this.reports];
     });
-    this.router.navigate([`/resort-info/${newReport.label}`]).then(() => {
-      window.location.reload();
-    });
   }
 }

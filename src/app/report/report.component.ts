@@ -21,9 +21,7 @@ export class ReportComponent {
 
   clickEdit() {
     this.reportService.editReport(this.report).subscribe();
-    this.router.navigate([`/resort-info/${this.report.label}`]).then(() => {
-      window.location.reload();
-    });
+    this.expandReport();
   }
 
   clickDelete() {
