@@ -3,7 +3,7 @@
   <form
     #newReportForm="ngForm"
     class="new-report-form"
-    (ngSubmit)="addReport(newReportForm.value)"
+    (ngSubmit)="addReport(newReportForm.value); newReportForm.reset()"
   >
     <div class="report-header-inputs">
       <div class="name-input">
