@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import { Report } from '../models/Report';
 import { ReportService } from '../services/report.service';
@@ -10,6 +10,7 @@ import { ReportService } from '../services/report.service';
 })
 export class ReportComponent {
   @Input() report!: Report;
+  @Output() deleteClick = new EventEmitter();
   more = false;
 
   constructor(private reportService: ReportService, private router: Router) {}
@@ -26,9 +27,6 @@ export class ReportComponent {
   }
 
   clickDelete() {
-    this.reportService.deleteReport(this.report.id).subscribe();
-    this.router.navigate([`/resort-info/${this.report.label}`]).then(() => {
-      window.location.reload();
-    });
+    this.deleteClick.emit(this.report);
   }
 }
