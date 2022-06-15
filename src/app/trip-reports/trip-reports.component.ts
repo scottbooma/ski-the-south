@@ -30,7 +30,9 @@ export class TripReportsComponent implements OnInit {
   addReport(newReport: Report) {
     newReport.label = this.route.snapshot.params['resort'];
     this.reportService.addReport(newReport).subscribe((response) => {
-      this.reports = [response.report, ...this.reports];
+      this.reports = [response.report, ...this.reports].sort((a, b) =>
+        a.date < b.date ? 1 : -1
+      );
     });
   }
 }
