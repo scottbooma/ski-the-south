@@ -9,10 +9,10 @@ Link to backend repo: https://github.com/scottbooma/ski-the-south-api
 Ski The South is a webapp focused on allowing users to provide their personal input on the current ski conditions at various ski resorts in the Southeast US.
 
 The user is first greeted by a list of all the ski resorts south of the Mason Dixon line.
-https://i2.paste.pics/dcdb750d77c3f006e58145269d8fc06b.png
+![image](https://user-images.githubusercontent.com/97684975/173919777-f305059a-63f1-4584-a305-cba5f65d4806.png)
 
 Upon selecting a resort to view they are greeted with a page displaying the trail map, mountain stats, and some helpful links for the resort.
-https://i2.paste.pics/11b387fbcfd90a8ca57722f5cae3425d.png
+![image](https://user-images.githubusercontent.com/97684975/173919837-977d141a-007a-4757-a8df-12de20c9f3ab.png)
 
 Scrolling down further shows a list of Trip Reports from users and a form that the user can fill out to add a new Trip Report.
-https://i2.paste.pics/9aed279bfde66b7e0479c794c4bb55a6.png
+![image](https://user-images.githubusercontent.com/97684975/173919895-d716ea26-28dd-4eb5-8ddf-f43dfaa32bc4.png)
