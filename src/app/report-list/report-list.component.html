@@ -1,11 +1,3 @@
 <div class="report-list" *ngFor="let report of reports">
-  <app-report
-    [name]="report.name"
-    [date]="report.date"
-    [vibe]="report.vibe"
-    [description]="report.description"
-    [id]="report.id"
-    [label]="report.label"
-    [report]="report"
-  ></app-report>
+  <app-report [report]="report"></app-report>
 </div>

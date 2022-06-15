@@ -32,8 +32,7 @@ export class ReportService {
   }
 
   deleteReport(id: number) {
-    return this.http.delete<ReportResponse>(
-      `${environment.apiUrl}/reports/${id}`
-    );
+    console.log(id);
+    return this.http.delete<Report>(`${environment.apiUrl}/reports/${id}`);
   }
 }
