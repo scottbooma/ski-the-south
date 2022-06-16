@@ -35,4 +35,10 @@ export class TripReportsComponent implements OnInit {
       );
     });
   }
+
+  deleteReport(report: Report) {
+    this.reportService.deleteReport(report.id).subscribe(() => {
+      this.reports = this.reports.filter((r) => r.id !== report.id);
+    });
+  }
 }

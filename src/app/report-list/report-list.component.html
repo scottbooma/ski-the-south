@@ -1,6 +1,3 @@
 <div class="report-list" *ngFor="let report of reports">
-  <app-report
-    [report]="report"
-    (deleteClick)="deleteReport($event)"
-  ></app-report>
+  <app-report [report]="report" (deleteClick)="passEvent($event)"></app-report>
 </div>
