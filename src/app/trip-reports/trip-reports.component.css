@@ -69,3 +69,37 @@ input {
 [type="submit"]:hover {
   background-color: hsl(240, 30%, 50%);
 }
+
+@media (max-width: 500px) {
+  .new-report-form {
+    margin-bottom: 24px;
+  }
+
+  .new-report-form > * {
+    display: block;
+    text-align: center;
+  }
+
+  .report-header-inputs {
+    width: 80%;
+    text-align: center;
+  }
+
+  .report-header-inputs > div + div {
+    margin-top: 8px;
+  }
+
+  .description-input {
+    width: 80%;
+  }
+
+  [type="submit"] {
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 32px;
+    cursor: pointer;
+    width: 60%;
+    margin-top: 12px;
+  }
+}

@@ -121,3 +121,51 @@ button + button {
 button:hover {
   background-color: hsl(240, 30%, 50%);
 }
+
+@media (max-width: 500px) {
+  .report-description {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .report-date,
+  .report-vibe {
+    margin-top: 4px;
+  }
+
+  .edit-report-form {
+    margin-bottom: 24px;
+  }
+
+  .edit-report-form > * {
+    display: block;
+    text-align: center;
+  }
+
+  .report-header-inputs {
+    width: 100%;
+    text-align: center;
+  }
+
+  .report-header-inputs > div + div {
+    margin-top: 8px;
+  }
+
+  .description-input {
+    width: 100%;
+  }
+
+  button {
+    font-size: 14px;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 32px;
+    cursor: pointer;
+    width: 90%;
+    margin-top: 12px;
+  }
+
+  button + button {
+    margin-left: 0px;
+  }
+}
